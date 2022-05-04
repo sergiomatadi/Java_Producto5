@@ -2,12 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-
+import gnoctua.modelo.Articulo;
+import gnoctua.modelo.ArticuloDAO;
+import gnoctua.modelo.DAOFactory;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -43,12 +47,32 @@ public class FXMLAnyadirArticuloController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        
+    }
     
     @FXML
     void btnAceptarArticuloClicado(ActionEvent event) {
+        
+        String sCodigo=tfCodigoArticulo.getText().trim(); //.trim elimina espacios vacios
+        int codigo=Integer.parseInt(sCodigo);
+        String descripcion=tfDescripcionArticulo.getText().trim();
+        String sGastosEnvio=tfGastosEnvioArticulo.getText().trim();
+        double gastosEnvio=Double.parseDouble(sGastosEnvio);
+        String sPrecioVenta=tfPrecioVentaArticulo.getText().trim();
+        double precioVenta=Double.parseDouble(sPrecioVenta);
+        String sTiempoEnvio=tfTiempoEnvioArticulo.getText().trim();
+        LocalDate tiempoEnvio=LocalDate.parse(sTiempoEnvio);
+        
+        Articulo c=null;
+        c=new Articulo(codigo, descripcion, precioVenta, gastosEnvio,tiempoEnvio);     
 
+       
+        ArticuloDAO dao=DAOFactory.createArticuloDAO(c.getClass());
+        dao.create(c);
+        Alert a=new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText("Articulo creado");
+        a.show();
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_PRINCIPAL);
     }
 
     @FXML

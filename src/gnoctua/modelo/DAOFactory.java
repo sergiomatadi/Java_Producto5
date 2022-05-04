@@ -14,8 +14,15 @@ public class DAOFactory {
     public static ArticuloDAO createArticuloDAO(){
         return new ArticuloDAO();
     }
+      public static ArticuloDAO createArticuloDAO(Class c){
+        return new ArticuloDAO();
+    }
     
     public static PedidoDAO createPedidoDAO(){
+        return new PedidoDAO();
+    }
+    
+       public static PedidoDAO createPedidoDAO(Class c){
         return new PedidoDAO();
     }
     
