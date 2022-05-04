@@ -98,7 +98,7 @@ public class FXMLAnyadirClienteController implements Initializable {
     
     @FXML
     public void btnCancelarClienteClicado(ActionEvent evt){
-        System.out.println("Hola");
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_PRINCIPAL);
     }
 }
 

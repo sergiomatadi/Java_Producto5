@@ -24,6 +24,12 @@ public class NewFXMain extends Application {
     
     public static final int ESCENA_PRINCIPAL=0;
     public static final int ESCENA_NUEVO_CLIENTE=1;
+    public static final int ESCENA_MOSTAR_CLIENTE=2;
+    public static final int ESCENA_NUEVO_ARTICULO=3;
+    public static final int ESCENA_MOSTAR_ARTICULO=4;
+    public static final int ESCENA_NUEVO_PEDIDO=5;
+    public static final int ESCENA_MOSTAR_PEDIDO=6;
+    public static final int ESCENA_SALIR=7;
     
     private static Stage primaryStage;
     private static NewFXMain main;
@@ -37,13 +43,14 @@ public class NewFXMain extends Application {
     
     public static void mostrarEscena(int escena){
         switch(escena){
-            case ESCENA_PRINCIPAL:
-                setEscena("FXML.fxml");
-                break;
-            case ESCENA_NUEVO_CLIENTE:
-                setEscena("FXMLAnyadirCliente.fxml");
-                break;
-                
+            case ESCENA_PRINCIPAL -> setEscena("FXML.fxml");
+            case ESCENA_NUEVO_CLIENTE -> setEscena("FXMLAnyadirCliente.fxml");
+            case ESCENA_MOSTAR_CLIENTE -> setEscena("FXMLMostarCliente.fxml");
+            case ESCENA_NUEVO_ARTICULO -> setEscena("FXMLAnyadirArticulo.fxml");
+            case ESCENA_MOSTAR_ARTICULO -> setEscena("FXMLMostarArticulo.fxml");
+            case ESCENA_NUEVO_PEDIDO -> setEscena("FXMLAnyadirPedido.fxml");
+            case ESCENA_MOSTAR_PEDIDO -> setEscena("FXMLMostarPedido.fxml");
+            case ESCENA_SALIR -> setEscena("FXML.fxml");           
         }
     }
     
@@ -53,7 +60,7 @@ public class NewFXMain extends Application {
             
             Scene scene = new Scene(root);
             
-            primaryStage.setTitle("Hello World!");
+            primaryStage.setTitle("GNoctua!");
             primaryStage.setScene(scene);
             primaryStage.show();
             } catch (IOException ex) {
