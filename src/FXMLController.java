@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 
 
@@ -52,36 +53,34 @@ public class FXMLController implements Initializable {
 
     @FXML
     public void btnMostrarClientesClicado(ActionEvent evt){
-        System.out.println("Hola");
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_MOSTAR_CLIENTE);
     }
     
     @FXML
     public void btnAnyadirArticuloClicado(ActionEvent evt){
-        System.out.println("Hola");
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_NUEVO_ARTICULO);
     }
     
     @FXML
     public void btnMostrarArticuloClicado(ActionEvent evt){
-        System.out.println("Hola");
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_MOSTAR_ARTICULO);
     }  
    
    
     @FXML
     public void btnAnyadirPedidoClicado(ActionEvent evt){
-        System.out.println("Hola");
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_NUEVO_PEDIDO);
     }
    
     @FXML
     public void btnMostrarPedidoCliclado(ActionEvent evt){
-        System.out.println("Hola");
+        NewFXMain.mostrarEscena(NewFXMain.ESCENA_MOSTAR_PEDIDO);
     }
     
      @FXML
     public void btnSalirCliclado(ActionEvent evt){
-        System.out.println("Hola");
-    }
-    
-    
-   
-    
+        Alert a=new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText("HASTA PRONTO");
+        a.show();
+    } 
 }
