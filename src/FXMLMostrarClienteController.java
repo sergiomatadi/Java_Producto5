@@ -50,7 +50,7 @@ public class FXMLMostrarClienteController implements Initializable {
     private Button btnAtras;
 
     
-    ObservableList<ClienteDAO> oblist = FXCollections.observableArrayList();
+    //ObservableList<ClienteDAO> oblist = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

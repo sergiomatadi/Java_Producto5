@@ -11,6 +11,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -46,6 +47,7 @@ public class FXMLMostrarPedidoController implements Initializable {
     private TableColumn<PedidoDAO, Integer> tvNumeroPedido;
 
     
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        PedidoDAO dao=DAOFactory.createPedidoDAO();
@@ -53,13 +55,13 @@ public class FXMLMostrarPedidoController implements Initializable {
        lista = (ArrayList<PedidoDAO>) (dao.listar());
       
         tvCantidadPedido.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
-        /*tvCodigoPedido.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+        tvCodigoPedido.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         tvEnviadoPedido.setCellValueFactory(new PropertyValueFactory<>("enviado"));
         tvFechaPedido.setCellValueFactory(new PropertyValueFactory<>("fechaPedido"));
         tvHoraPedido.setCellValueFactory(new PropertyValueFactory<>("hora"));
         tvNifPedido.setCellValueFactory(new PropertyValueFactory<>("nif"));
         tvNumeroPedido.setCellValueFactory(new PropertyValueFactory<>("numero"));
-        *///tvTipoCliente.setCellValueFactory(new PropertyValueFactory<>("tipo_cliente"));
+       
         tablePedido.setItems(FXCollections.observableArrayList(lista));
     }    
     

@@ -50,7 +50,7 @@ public class NewFXMain extends Application {
             case ESCENA_MOSTAR_ARTICULO -> setEscena("FXMLMostrarArticulo.fxml");
             case ESCENA_NUEVO_PEDIDO -> setEscena("FXMLAnyadirPedido.fxml");
             case ESCENA_MOSTAR_PEDIDO -> setEscena("FXMLMostrarPedido.fxml");
-            case ESCENA_SALIR -> setEscena("FXML.fxml");           
+            case ESCENA_SALIR -> setEscena("FXML.fxml");
         }
     }
     
@@ -63,7 +63,7 @@ public class NewFXMain extends Application {
             primaryStage.setTitle("Online Store");
             primaryStage.setScene(scene);
             primaryStage.show();
-            } catch (IOException ex) {
+        } catch (IOException ex) {
             Logger.getLogger(NewFXMain.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
