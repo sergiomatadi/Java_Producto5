@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 
 import gnoctua.modelo.DAOFactory;
 import gnoctua.modelo.PedidoDAO;
@@ -11,7 +8,6 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,7 +48,7 @@ public class FXMLMostrarPedidoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        PedidoDAO dao=DAOFactory.createPedidoDAO();
        ArrayList<PedidoDAO> lista = new ArrayList<>();
-       lista = (ArrayList<PedidoDAO>) (dao.listar());
+       lista = (dao.listar());
       
         tvCantidadPedido.setCellValueFactory(new PropertyValueFactory<>("cantidad"));
         tvCodigoPedido.setCellValueFactory(new PropertyValueFactory<>("codigo"));

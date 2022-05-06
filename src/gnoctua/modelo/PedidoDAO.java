@@ -24,11 +24,11 @@ public class PedidoDAO extends DAO{
         return a;
     }
     
-    public List<PedidoDAO> listar(){
+    public ArrayList<PedidoDAO> listar(){
         em.getTransaction().begin();
-        
         Query q=em.createQuery("select a from Pedido a");
-        List<PedidoDAO> l=q.getResultList();
+        ArrayList<PedidoDAO> l= new ArrayList<>();
+        l.addAll(q.getResultList());
         em.getTransaction().commit();
         return l;
     }

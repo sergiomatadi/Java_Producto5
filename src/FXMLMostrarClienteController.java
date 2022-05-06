@@ -1,18 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 
-import gnoctua.modelo.Cliente;
+
 import gnoctua.modelo.ClienteDAO;
 import gnoctua.modelo.DAOFactory;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -62,7 +55,6 @@ public class FXMLMostrarClienteController implements Initializable {
         tvEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         tvNif.setCellValueFactory(new PropertyValueFactory<>("nif"));
         tvNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        //tvTipoCliente.setCellValueFactory(new PropertyValueFactory<>("tipo_cliente"));
         table.setItems(FXCollections.observableArrayList(lista));
 
     }

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 
 import gnoctua.modelo.ArticuloDAO;
 import gnoctua.modelo.DAOFactory;
@@ -51,7 +48,7 @@ public class FXMLMostrarArticuloController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        ArticuloDAO dao=DAOFactory.createArticuloDAO();
        ArrayList<ArticuloDAO> lista = new ArrayList<>();
-       lista = (ArrayList<ArticuloDAO>) (dao.listar());
+       lista = (dao.listar());
       
         tvCodigoArticulo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         tvDescripcionArticulo.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
