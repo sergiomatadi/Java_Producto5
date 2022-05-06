@@ -4,15 +4,19 @@
  */
 
 import gnoctua.modelo.ArticuloDAO;
+import gnoctua.modelo.DAOFactory;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * FXML Controller class
@@ -45,7 +49,18 @@ public class FXMLMostrarArticuloController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       ArticuloDAO dao=DAOFactory.createArticuloDAO();
+       ArrayList<ArticuloDAO> lista = new ArrayList<>();
+       lista = (ArrayList<ArticuloDAO>) (dao.listar());
+      
+        tvCodigoArticulo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
+        tvDescripcionArticulo.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
+        tvGastosEnvioArticulo.setCellValueFactory(new PropertyValueFactory<>("gastosEnvio"));
+        tvPrecioVentaArticulo.setCellValueFactory(new PropertyValueFactory<>("precioVenta"));
+        tvTiempoEnvioArticulo.setCellValueFactory(new PropertyValueFactory<>("tiempoEnvio"));
+        
+        //tvTipoCliente.setCellValueFactory(new PropertyValueFactory<>("tipo_cliente"));
+        tableArticulo.setItems(FXCollections.observableArrayList(lista));
     }    
     
     @FXML

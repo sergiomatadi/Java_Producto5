@@ -45,11 +45,11 @@ public class NewFXMain extends Application {
         switch(escena){
             case ESCENA_PRINCIPAL -> setEscena("FXML.fxml");
             case ESCENA_NUEVO_CLIENTE -> setEscena("FXMLAnyadirCliente.fxml");
-            case ESCENA_MOSTAR_CLIENTE -> setEscena("FXMLMostarCliente.fxml");
+            case ESCENA_MOSTAR_CLIENTE -> setEscena("FXMLMostrarCliente.fxml");
             case ESCENA_NUEVO_ARTICULO -> setEscena("FXMLAnyadirArticulo.fxml");
-            case ESCENA_MOSTAR_ARTICULO -> setEscena("FXMLMostarArticulo.fxml");
+            case ESCENA_MOSTAR_ARTICULO -> setEscena("FXMLMostrarArticulo.fxml");
             case ESCENA_NUEVO_PEDIDO -> setEscena("FXMLAnyadirPedido.fxml");
-            case ESCENA_MOSTAR_PEDIDO -> setEscena("FXMLMostarPedido.fxml");
+            case ESCENA_MOSTAR_PEDIDO -> setEscena("FXMLMostrarPedido.fxml");
             case ESCENA_SALIR -> setEscena("FXML.fxml");           
         }
     }
@@ -60,7 +60,7 @@ public class NewFXMain extends Application {
             
             Scene scene = new Scene(root);
             
-            primaryStage.setTitle("GNoctua!");
+            primaryStage.setTitle("Online Store");
             primaryStage.setScene(scene);
             primaryStage.show();
             } catch (IOException ex) {

@@ -12,9 +12,9 @@
         <columns>
           <TableColumn fx:id="tvNombre" prefWidth="75.0" text="Nombre" />
           <TableColumn fx:id="tvDomicilio" prefWidth="95.0" text="Domicilio" />
-            <TableColumn fx:id="tvEmail" prefWidth="149.0" text="Email" />
-            <TableColumn fx:id="tvNif" prefWidth="112.0" text="NIF" />
-            <TableColumn fx:id="tvTipoCliente" prefWidth="142.0" text="Tipo Cliente" />
+          <TableColumn fx:id="tvEmail" prefWidth="149.0" text="Email" />
+          <TableColumn fx:id="tvNif" prefWidth="112.0" text="NIF" />
+          <!--<TableColumn fx:id="tvTipoCliente" prefWidth="142.0" text="Tipo Cliente" />-->
         </columns>
       </TableView>
       <Button fx:id="btnAtras" layoutX="259.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnAtrasClicado" prefHeight="25.0" prefWidth="88.0" text="Atras" />

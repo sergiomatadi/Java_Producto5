@@ -33,11 +33,11 @@ public class ArticuloDAO extends DAO {
         return a;
     }
     
-    public List<Articulo> listar(){
+    public List<ArticuloDAO> listar(){
         em.getTransaction().begin();
         
         Query q=em.createQuery("select a from Articulo a");
-        List<Articulo> l=q.getResultList();
+        List<ArticuloDAO> l=q.getResultList();
         em.getTransaction().commit();
         return l;
     }
