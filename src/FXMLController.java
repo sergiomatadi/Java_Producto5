@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 
 public class FXMLController implements Initializable {
@@ -79,8 +80,8 @@ public class FXMLController implements Initializable {
     
      @FXML
     public void btnSalirCliclado(ActionEvent evt){
-        Alert a=new Alert(Alert.AlertType.INFORMATION);
-        a.setContentText("HASTA PRONTO");
-        a.show();
+        Stage stage = (Stage) btnSalir.getScene().getWindow();
+        stage.close();
+        
     } 
 }

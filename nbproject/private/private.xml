@@ -3,13 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/FXMLController.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/NewFXMain.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/gnoctua/modelo/ClienteStandard.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/gnoctua/modelo/Cliente.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/FXMLAnyadirClienteController.java</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/FXMLAnyadirCliente.fxml</file>
-            <file>file:/C:/Users/Usuario/Documents/NetBeansProjects/JavaApplication5/src/gnoctua/modelo/ClientePremium.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/FXMLMostrarArticuloController.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/FXMLMostrarPedidoController.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/FXMLMostrarClienteController.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/gnoctua/modelo/ClienteDAO.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/FXMLAnyadirClienteController.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/gnoctua/modelo/PedidoDAO.java</file>
+            <file>file:/C:/Users/denis/Desktop/JavaProducto5/Java_Producto5/src/gnoctua/modelo/Cliente.java</file>
         </group>
     </open-files>
 </project-private>

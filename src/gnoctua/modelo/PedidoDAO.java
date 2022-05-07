@@ -1,6 +1,7 @@
 
 package gnoctua.modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Query;
 
@@ -23,11 +24,11 @@ public class PedidoDAO extends DAO{
         return a;
     }
     
-    public List<Pedido> listar(){
+    public ArrayList<PedidoDAO> listar(){
         em.getTransaction().begin();
-        
         Query q=em.createQuery("select a from Pedido a");
-        List<Pedido> l=q.getResultList();
+        ArrayList<PedidoDAO> l= new ArrayList<>();
+        l.addAll(q.getResultList());
         em.getTransaction().commit();
         return l;
     }

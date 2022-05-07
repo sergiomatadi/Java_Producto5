@@ -29,16 +29,16 @@ public class ClienteDAO extends DAO {
         return a;
     }
 
-    public List<Cliente> listar(){
-        List<Cliente> l=new ArrayList<>();
+    public ArrayList<ClienteDAO> listar(){
+        ArrayList<ClienteDAO> l=new ArrayList<>();
         
         em.getTransaction().begin();
         
         Query q1=em.createQuery("select c from ClientePremium  c");
-        List<Cliente> l1=q1.getResultList();
+        List<ClienteDAO> l1=q1.getResultList();
         
         Query q2=em.createQuery("select c from ClienteStandard  c");
-        List<Cliente> l2=q2.getResultList();
+        List<ClienteDAO> l2=q2.getResultList();
         
         l.addAll(l1);
         l.addAll(l2);
