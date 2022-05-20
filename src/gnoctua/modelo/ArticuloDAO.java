@@ -34,11 +34,11 @@ public class ArticuloDAO extends DAO {
         return a;
     }
     
-    public ArrayList<ArticuloDAO> listar(){
+    public ArrayList<Articulo> listar(){
         em.getTransaction().begin();
         
         Query q=em.createQuery("select a from Articulo a");
-        ArrayList<ArticuloDAO> l= new ArrayList<>();
+        ArrayList<Articulo> l= new ArrayList<>();
         l.addAll(q.getResultList());
         em.getTransaction().commit();
         return l;

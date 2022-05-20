@@ -25,6 +25,9 @@ public class ClienteStandard extends Cliente{
         return "nombre=" + nombre + ", domicilio=" + domicilio + ", email=" + email + ", nif=" + nif + ", tipo de cliente= standard";
     }
     
-    
+    @Override
+    public String getTipoCliente(){
+        return "Standard";
+    }
     
 }

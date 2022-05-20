@@ -88,6 +88,8 @@ public abstract class Cliente implements Serializable{
     public void setNif(String nif) {
         this.nif = nif;
     }
+    
+    public abstract String getTipoCliente();
 
     @Override
     public String toString() {
