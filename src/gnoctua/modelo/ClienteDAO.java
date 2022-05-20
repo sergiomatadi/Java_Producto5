@@ -13,9 +13,6 @@ public class ClienteDAO extends DAO {
     public static final String TIPO_PREMIUM="premium";
     
     
-    
-    
-    
     public Cliente read(String nif){
         
         em.getTransaction().begin();
@@ -29,16 +26,16 @@ public class ClienteDAO extends DAO {
         return a;
     }
 
-    public ArrayList<ClienteDAO> listar(){
-        ArrayList<ClienteDAO> l=new ArrayList<>();
+    public ArrayList<Cliente> listar(){
+        ArrayList<Cliente> l=new ArrayList<>();
         
         em.getTransaction().begin();
         
         Query q1=em.createQuery("select c from ClientePremium  c");
-        List<ClienteDAO> l1=q1.getResultList();
+        List<Cliente> l1=q1.getResultList();
         
         Query q2=em.createQuery("select c from ClienteStandard  c");
-        List<ClienteDAO> l2=q2.getResultList();
+        List<Cliente> l2=q2.getResultList();
         
         l.addAll(l1);
         l.addAll(l2);

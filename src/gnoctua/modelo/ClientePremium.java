@@ -44,6 +44,11 @@ public class ClientePremium extends Cliente{
     public void setDescuentoEnvio(double descuentoEnvio){
         this.descuentoEnvio = descuentoEnvio;
     }
+    
+    @Override
+    public String getTipoCliente(){
+        return "Premium";
+    }
  
    //public abstract float getDescuentoEnv();
 
